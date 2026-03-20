@@ -1,0 +1,64 @@
+
+# --- OS / editor ---
+desktop.ini
+Thumbs.db
+.DS_Store
+
+# --- Python / Jupyter ---
+**/__pycache__/
+**/*.py[cod]
+**/*.pyd
+**/*.so
+**/.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- Environments ---
+.venv/
+venv/
+env/
+
+# --- Outputs / scratch ---
+**/tmp/
+**/results/
+**/build/
+
+# --- Data / binary artifacts (public repo: keep out by default) ---
+**/*.pkl
+**/*.npz
+**/*.npy
+**/*.h5
+**/*.hdf5
+**/*.fits
+**/*.fit
+**/*.parquet
+**/*.feather
+**/*.zip
+
+# CSVs tend to be data/outputs; keep out by default.
+**/*.csv
+
+# PDFs are often third-party papers or compiled outputs.
+**/*.pdf
+
+# Common scientific output formats
+**/*.dat
+**/*.log
+**/*.points
+
+# --- Project-specific ---
+# Duplicate Overleaf export directory (keep only the `overleaf/` submodule)
+Overleaf/
+
+# Bibliography papers (usually copyrighted PDFs)
+bibliography/papers/
+
+# Treat these as data/result bundles (exclude from public repo)
+Zuluaga_PhotoRing/Kepler_51_Kipping/
+analysis/**/Kepler_51_Kipping/
+
+# Large result folders (keep notebooks/scripts; ignore generated plots)
+Zuluaga_PhotoRing/figures/
+analysis/**/figures/
+analysis/**/results/
