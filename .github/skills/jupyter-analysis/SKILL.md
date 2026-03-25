@@ -21,12 +21,14 @@ argument-hint: 'Mention the target notebook file'
 Your primary goal is to generate a comprehensive, well-structured Technical Research Report in Markdown format.
 
 **⚡ CRITICAL INSTRUCTIONS (MUST FOLLOW):**
-1. **Explicit Code Blocks**: You MUST extract and show the referenced code within markdown code blocks (e.g., ` ```python `). Include the full cell if necessary or its logical flow. **Crucially, preserve all original inline comments.** Do not just summarize what the code does; you MUST display the code itself.
-2. **Render Images Directly**: Images and figures produced by the notebook MUST be displayed visually directly within the markdown report. You must link, embed, or save the actual outputs so the images render inline in the final document, not just describe them textually.
-3. **Direct Cell Linking**: To guarantee navigability, EVERYTHING (theory, code, results, images) must have an integrated link connecting DIRECTLY to the specific cell in the notebook. Use VS Code's file link format with line numbers corresponding to the start of the cell (e.g., `[Cell 3: Data Load](notebook.ipynb#L45)`).
+1. **Explicit Core Code Only (Omit Plotting Code)**: You MUST extract and show the referenced code for core logic, models, or algorithms within markdown code blocks (e.g., ` ```python `), preserving original inline comments. **HOWEVER, DO NOT include code blocks whose sole purpose is generating figures or plots.** Focus entirely on the functional and mathematical code.
+2. **Preserve Original Context**: Retain and integrate significant portions of the original Markdown text from the notebook. The author's original notes often contain valuable context, physical insights, and analysis that should be complemented, not discarded.
+3. **Deep, Detailed Analysis**: Do not just summarize superficially. You must dive deeply into the subject matter, elaborating on the physical, statistical, and mathematical inferences. Expand on *why* a method is used, *how* the theoretical framework applies, and *what* the absolute implications of the results are.
+4. **Render Images Directly**: Images and figures produced by the notebook MUST be displayed visually directly within the markdown report.
+5. **Direct Cell Linking**: To guarantee navigability, EVERYTHING (theory, code, results, images) must have an integrated link connecting DIRECTLY to the specific cell in the notebook. Use VS Code's file link format with line numbers (e.g., `[Cell 3: Data Load](notebook.ipynb#L45)`).
 
 ### General Formatting & Structure:
-- **Theory-Code-Result Flow**: Contextualize the project. Link **theory + code + result** for each cell to seamlessly interrelate the entire pipeline.
-- **Theory & Justification**: Explain the *why* and *how*. You MUST include the mathematical, statistical, theoretical, or physical underpinnings (crucial for astrophysics notebooks). Use LaTeX (`$math$`, `$$math$$`) for all mathematical expressions.
-- **Tests & Trials**: Extract and explicitly describe all results, including explanations of any tests or trials present in the notebook, even if they seem disorganized.
-- **Citations & References**: Reference all theoretical foundation, methods, and external knowledge using formal alphanumeric citation style (e.g., [1], [2]). At the end of the report, include a formal **References** section detailing all sources.
+- **Theory-Code-Result Flow**: Contextualize the project. Link **theory + core code + result** for each cell to seamlessly interrelate the entire pipeline.
+- **Theory & Justification**: Explain the *why* and *how*. Include the mathematical, statistical, theoretical, or physical underpinnings using LaTeX (`$math$`, `$$math$$`) for all expressions.
+- **Tests & Trials**: Extract and explicitly describe all results, including explanations of tests or trials present in the notebook, even if seemingly disorganized.
+- **Citations & References**: Reference all theoretical foundation, methods, and external knowledge using formal alphanumeric citation style (e.g., [1], [2]). At the end of the report, include a formal **References** section.
