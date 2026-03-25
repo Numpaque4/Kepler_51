@@ -20,9 +20,13 @@ argument-hint: 'Mention the target notebook file'
 ## Report Generation (Technical Research Report)
 Your primary goal is to generate a comprehensive, well-structured Technical Research Report in Markdown format.
 
-- **Structure**: Contextualize the project, explain where it comes from, how it is implemented, and what is obtained. Link **theory + code + result** for each cell to seamlessly interrelate the entire flow.
-- **Navegability & Links**: To guarantee navigability between the report and the notebook, EVERYTHING must have an integrated link connecting to the specific section of the notebook (e.g., Markdown anchors or explicit VS Code file links with line numbers like `[notebook.ipynb](notebook.ipynb#L10)` or referencing explicit cell names/numbers) where the figures, code cells, or results are visualized.
-- **Theory & Justification**: Explain the *why* and *how*. You MUST include the mathematical, statistical, theoretical, or physical underpinnings (crucial for astrophysics notebooks).
-- **Formatting**: Use Markdown extensively. Use LaTeX (`$math$`, `$$math$$`) for all mathematical expressions. Use properly styled code blocks.
-- **Results, Images, and Tests**: Extract and explicitly describe all results. Reference inline images and figures, explaining what they represent within the flow. Include explanations of any tests or trials present in the notebook, even if they seem disorganized.
-- **Citations & References**: Reference all theoretical foundation, methods, and external knowledge using formal alphanumeric citation style (e.g., [1], [2]). At the end of the report, include a formal **References** section detailing all sources, including any implicit knowledge or searches you performed to sustain the analysis.
+**⚡ CRITICAL INSTRUCTIONS (MUST FOLLOW):**
+1. **Explicit Code Blocks**: You MUST extract and show the referenced code within markdown code blocks (e.g., ` ```python `). Include the full cell if necessary or its logical flow. **Crucially, preserve all original inline comments.** Do not just summarize what the code does; you MUST display the code itself.
+2. **Render Images Directly**: Images and figures produced by the notebook MUST be displayed visually directly within the markdown report. You must link, embed, or save the actual outputs so the images render inline in the final document, not just describe them textually.
+3. **Direct Cell Linking**: To guarantee navigability, EVERYTHING (theory, code, results, images) must have an integrated link connecting DIRECTLY to the specific cell in the notebook. Use VS Code's file link format with line numbers corresponding to the start of the cell (e.g., `[Cell 3: Data Load](notebook.ipynb#L45)`).
+
+### General Formatting & Structure:
+- **Theory-Code-Result Flow**: Contextualize the project. Link **theory + code + result** for each cell to seamlessly interrelate the entire pipeline.
+- **Theory & Justification**: Explain the *why* and *how*. You MUST include the mathematical, statistical, theoretical, or physical underpinnings (crucial for astrophysics notebooks). Use LaTeX (`$math$`, `$$math$$`) for all mathematical expressions.
+- **Tests & Trials**: Extract and explicitly describe all results, including explanations of any tests or trials present in the notebook, even if they seem disorganized.
+- **Citations & References**: Reference all theoretical foundation, methods, and external knowledge using formal alphanumeric citation style (e.g., [1], [2]). At the end of the report, include a formal **References** section detailing all sources.
